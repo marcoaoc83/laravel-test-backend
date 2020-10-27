@@ -19,11 +19,11 @@ class ImovelTest extends TestCase
     }
 
     /** @test */
-    public function cadastrar_imovel()
+    public function verifica_se_cadastro_imovel_salva()
     {
         $numero= random_int(1,9999);
         $dados = [
-            "email" => "marcoaoc83@gmail.com",
+            "email" => "teste@accordous.com",
             "rua" => "Rua Teste",
             "numero" =>$numero,
             "complemento" => 'Complemento teste',

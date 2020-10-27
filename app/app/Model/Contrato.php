@@ -15,7 +15,10 @@ class Contrato extends Model
         'email',
         'nome'
     ];
-
+    public function setDocumentoAttribute($value)
+    {
+        $this->attributes['documento'] = preg_replace("/[^0-9]/", "", $value);
+    }
     public function Imovel()
     {
         return $this->hasOne('App\Model\Imovel','propriedade');
