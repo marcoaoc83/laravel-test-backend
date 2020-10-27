@@ -18,6 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/geekcom/validator-docs" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jakub-onderka/php-console-highlighter" />
@@ -85,7 +86,6 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
-      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php70" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php80" />

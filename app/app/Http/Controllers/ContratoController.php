@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ImovelRequest;
-use App\Http\Resources\ImovelResource;
-use App\Model\Imovel;
+use App\Http\Requests\ContratoRequest;
+use App\Model\Contrato;
 use Illuminate\Http\Request;
 use JamesDordoy\LaravelVueDatatable\Http\Resources\DataTableCollectionResource;
 
-class ImovelController extends Controller
+class ContratoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +19,11 @@ class ImovelController extends Controller
         $length = $request->length;
         $searchValue = $request->search;
 
-        $query = Imovel::orderBy($request->column,$request->dir);
+        $query = Contrato::orderBy($request->column,$request->dir);
         if($searchValue){
-            $query->orWhere('rua', 'like', '%'.$searchValue.'%');
+            $query->orWhere('nome', 'like', '%'.$searchValue.'%');
             $query->orWhere('email', 'like', '%'.$searchValue.'%');
         }
-        $query->where('ativo',1);
         $data = $query->paginate($length);
 
         return new DataTableCollectionResource($data);
@@ -38,8 +36,7 @@ class ImovelController extends Controller
      */
     public function index()
     {
-        //return ImovelResource::collection(Imovel::get());
-        return Imovel::all();
+        return Contrato::with('Imovel')->get();
     }
 
     /**
@@ -58,9 +55,9 @@ class ImovelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ImovelRequest $request)
+    public function store(ContratoRequest $request)
     {
-        return Imovel::create($request->all());
+        return Contrato::create($request->all());
     }
 
     /**
@@ -71,7 +68,7 @@ class ImovelController extends Controller
      */
     public function show($id)
     {
-        return Imovel::findOrFail($id);
+        return Contrato::findOrFail($id);
     }
 
     /**
@@ -92,11 +89,11 @@ class ImovelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ImovelRequest $request, $id)
+    public function update(ContratoRequest $request, $id)
     {
-        $imovel = Imovel::findOrFail($id);
-        $imovel->update($request->all());
-        return  $imovel;
+        $contrato = Contrato::findOrFail($id);
+        $contrato->update($request->all());
+        return  $contrato;
     }
 
     /**
@@ -107,8 +104,8 @@ class ImovelController extends Controller
      */
     public function destroy($id)
     {
-        $imovel = Imovel::findOrFail($id);
-        $imovel->update(['ativo'=>false]);
-        return  $imovel;
+        $contrato = Contrato::findOrFail($id);
+        $contrato->delete();
+        return  true;
     }
 }

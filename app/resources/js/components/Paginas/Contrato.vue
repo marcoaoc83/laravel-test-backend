@@ -5,14 +5,14 @@
                 <br>
                 <div class="card card-outline-secondary">
                     <div class="card-header d-flex flex-row align-items-center">
-                        <h3 class="mb-0 float-left">Imóveis</h3>
-                        <router-link to="imovel-criar"  class="btn btn-success ml-auto" style="align-items: center">
+                        <h3 class="mb-0 float-left">Contratos</h3>
+                        <router-link to="contrato-criar"  class="btn btn-success ml-auto" style="align-items: center">
                             <i class="fa fa-plus-circle"></i> Adicionar
                         </router-link>
                     </div>
                     <div class="card-body">
                         <data-table
-                                ref="datatableImovel"
+                                ref="datatableContrato"
                                 :url="url"
                                 :columns="columns"
                                 :per-page="perPage"
@@ -43,7 +43,7 @@
                     remember: false
                 }),
                 isLoading: false,
-                url: '/api/imovel-datatable',
+                url: '/api/contrato-datatable',
                 perPage: ['10', '25', '50'],
                 rows:[],
                 translate: {
@@ -51,47 +51,28 @@
                 },
 
                 columns: [
-
+                    {
+                        label: 'Nome',
+                        name: 'nome',
+                        orderable: true,
+                    },
                     {
                         label: 'Email',
                         name: 'email',
                         orderable: true,
-                    },
-                    {
-                        label: 'Endereco',
-                        name: 'endereco',
-                        orderable: true,
-                    },
-                    {
-                        label: '',
-                        name: 'Excluir',
-                        orderable: false,
-                        classes: {
-                            'btn': true,
-                            'btn-danger': true,
-                            'btn-sm': true,
-                        },
-                        classesicon:{
-                            'fa': true,
-                            'fa-times-circle': true,
-                        },
-                        event: "click",
-                        handler: this.excluirImovel,
-                        component: BtnDanger,
-                        width:'10'
-                    },
+                    }
                 ]
             }
         },
-        name: "Imovel",
+        name: "Contrato",
         components: {
-            Loading,
-            BtnDanger
+            Loading
         },
         methods: {
             reloadTable() {
-                this.$refs.datatableImovel.getData();
+                this.$refs.datatableContrato.getData();
             },
+
             excluirImovel(data){
                 Swal.fire({
                     title: 'Você tem certeza?',

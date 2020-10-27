@@ -22,6 +22,7 @@ class CreateImovelsTable extends Migration
             $table->string('bairro',250)->nullable(true);
             $table->string('cidade',250)->nullable(true);
             $table->string('estado',2)->nullable(true);
+            $table->boolean('ativo')->nullable(false)->default(true);
             //$table->timestamps();
         });
     }

@@ -14,7 +14,7 @@ class ImovelResource extends JsonResource
      */
     public function toArray($request)
     {
-        //Aqui faz a formatação do retorno
+        //Aqui faz a formatação do retorno ou no Model
         return [
             'email'=>$this->email,
             'rua'=>$this->rua,

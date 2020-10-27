@@ -17,16 +17,23 @@ class Imovel extends Model
         'complemento',
         'bairro',
         'cidade',
-        'estado'
+        'estado',
+        'ativo'
     ];
+    protected $appends = ['endereco'];
 
+    public function getEnderecoAttribute()
+    {
+        return $this->rua . ', ' . $this->numero . ', ' . $this->cidade . ', ' . $this->estado;
+    }
 
+    public function Contrato()
+    {
+        return $this->hasOne('App\Model\Contrato','id','propriedade');
+    }
 
     protected $dataTableColumns = [
-        'id' => [
-            'searchable' => false,
-        ],
-        'rua' => [
+        'endereco' => [
             'searchable' => true,
         ],
         'email' => [

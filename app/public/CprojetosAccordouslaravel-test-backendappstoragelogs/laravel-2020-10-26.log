@@ -1,10 +1,10 @@
-[2020-10-23 13:56:37] local.ERROR: View [home] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [home] not found. at /var/www/app/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137)
+[2020-10-26 20:29:49] local.ERROR: View [home] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [home] not found. at /var/www/app/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137)
 [stacktrace]
 #0 /var/www/app/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('home', Array)
 #1 /var/www/app/vendor/laravel/framework/src/Illuminate/View/Factory.php(131): Illuminate\\View\\FileViewFinder->find('home')
 #2 /var/www/app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(970): Illuminate\\View\\Factory->make('home', Array, Array)
 #3 /var/www/app/app/Http/Controllers/AppController.php(26): view('home')
-#4 [internal function]: App\\Http\\Controllers\\AppController->index('home')
+#4 [internal function]: App\\Http\\Controllers\\AppController->index()
 #5 /var/www/app/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
 #6 /var/www/app/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('index', Array)
 #7 /var/www/app/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\AppController), 'index')
@@ -46,12 +46,12 @@
 #43 /var/www/app/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #44 {main}
 "} 
-[2020-10-23 13:56:41] local.ERROR: file_put_contents(C:\projetos\Accordous\laravel-test-backend\app\storage\framework/sessions/nXScenbFd7e8RNyxBySr5jNrNONcOwN9wHHOieIc): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_put_contents(C:\\projetos\\Accordous\\laravel-test-backend\\app\\storage\\framework/sessions/nXScenbFd7e8RNyxBySr5jNrNONcOwN9wHHOieIc): failed to open stream: No such file or directory at /var/www/app/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:133)
+[2020-10-26 20:29:51] local.ERROR: file_put_contents(C:\projetos\Accordous\laravel-test-backend\app\storage\framework/sessions/QmBcN76Wm1S8XPt3CEqSLdreoJNBg9h0nl8RWgPI): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_put_contents(C:\\projetos\\Accordous\\laravel-test-backend\\app\\storage\\framework/sessions/QmBcN76Wm1S8XPt3CEqSLdreoJNBg9h0nl8RWgPI): failed to open stream: No such file or directory at /var/www/app/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:133)
 [stacktrace]
 #0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_put_conten...', '/var/www/app/ve...', 133, Array)
 #1 /var/www/app/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(133): file_put_contents('C:\\\\projetos\\\\Acc...', 'a:3:{s:6:\"_toke...', 2)
 #2 /var/www/app/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\\Filesystem\\Filesystem->put('C:\\\\projetos\\\\Acc...', 'a:3:{s:6:\"_toke...', true)
-#3 /var/www/app/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\\Session\\FileSessionHandler->write('nXScenbFd7e8RNy...', 'a:3:{s:6:\"_toke...')
+#3 /var/www/app/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\\Session\\FileSessionHandler->write('QmBcN76Wm1S8XPt...', 'a:3:{s:6:\"_toke...')
 #4 /var/www/app/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(170): Illuminate\\Session\\Store->save()
 #5 /var/www/app/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(65): Illuminate\\Session\\Middleware\\StartSession->saveSession(Object(Illuminate\\Http\\Request))
 #6 /var/www/app/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))

@@ -10,7 +10,6 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/app/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/debug" />
@@ -97,6 +96,7 @@
       <path value="$PROJECT_DIR$/app/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/app/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/app/vendor/jamesdordoy/laravelvuedatatable" />
+      <path value="$PROJECT_DIR$/app/vendor/geekcom/validator-docs" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

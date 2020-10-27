@@ -18,4 +18,6 @@ use Illuminate\Http\Request;
 //});
 
 Route::apiResource('imovel','ImovelController');
+Route::apiResource('contrato','ContratoController');
 Route::get('imovel-datatable','ImovelController@dataTable');
+Route::get('contrato-datatable','ContratoController@dataTable');
