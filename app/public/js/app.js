@@ -2631,6 +2631,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main"
 });
@@ -50806,9 +50819,35 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h1", [_vm._v("Accordous")]),
+      _c("h1", [_vm._v("Teste Accordous")]),
       _vm._v(" "),
-      _c("div", { staticClass: "container" })
+      _c("div", { staticClass: "container " }, [
+        _c("div", { staticClass: "row " }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "card card-outline-secondary" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card-header d-flex flex-row align-items-center"
+                },
+                [
+                  _c("h3", { staticClass: "mb-0 float-left" }, [
+                    _vm._v("Marco Coelho")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", [_vm._v("marcoaoc83@gmail.com")]),
+                _vm._v(" "),
+                _c("p", [_vm._v("67-99611-9286")])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
